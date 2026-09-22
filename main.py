@@ -296,7 +296,7 @@ async def say(ctx, *, mensaje: str):
     await ctx.message.delete()
     await ctx.send(mensaje)
 
-# --- MENÚ DE AYUDA ---
+# --- MENÚ DE AYUDA (MANTENIENDO TU TEXTO EXACTO) ---
 @bot.command(aliases=['help'])
 async def ayuda(ctx):
     embed = discord.Embed(
@@ -341,9 +341,25 @@ async def ayuda(ctx):
     embed.set_footer(text=f"Solicitado por {ctx.author.display_name}", icon_url=ctx.author.display_avatar.url)
     await ctx.send(embed=embed)
 
-  
 # 3. ENCENDIDO
+keep_alive()
+
+# Coloca tu TOKEN aquí
+bot.run("")
+# 3. ENCENDIDO
+import os
+from threading import Thread
+
+def ejecutar_servidor():
+    app.run(host='0.0.0.0', port=8080)
+
+def mantener_vivo():
+    t = Thread(target=ejecutar_servidor)
+    t.start()
+
+# Inicia el servidor web en un hilo secundario para no bloquear el bot
 mantener_vivo()
 
-import os
+# Inicia el bot de Discord con la variable de Render
 bot.correr(os.environ.get("TOKEN"))
+    
