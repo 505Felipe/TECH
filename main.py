@@ -36,7 +36,8 @@ if __name__ == '__main__':
     mantener_vivo()
     token = os.environ.get("TOKEN")
     if token:
-        bot.run(token)
+        bot.run(os.environ.get("TOKEN"))
+        
     else:
         print("ERROR: No se encontró la variable TOKEN en Render.")
         
