@@ -345,5 +345,5 @@ async def ayuda(ctx):
 keep_alive()
 
 # Coloca tu TOKEN aquí entre las comillas
-bot.run("TU_TOKEN_AQUI")
+bot.run("MTU1MTUwNDMyNzkzMDAyMzk0Nw.G0ZZ6R.Dr7v_KY6f-bd9vXFcVKQAArwbnm99GNvCsTeQo")
   
