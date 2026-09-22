@@ -345,21 +345,16 @@ async def ayuda(ctx):
 keep_alive()
 
 # Coloca tu TOKEN aquí
-bot.run("")
 # 3. ENCENDIDO
 import os
 from threading import Thread
 
-def ejecutar_servidor():
-    app.run(host='0.0.0.0', port=8080)
-
 def mantener_vivo():
-    t = Thread(target=ejecutar_servidor)
+    t = Thread(target=lambda: app.run(host='0.0.0.0', port=8080))
     t.start()
 
-# Inicia el servidor web en un hilo secundario para no bloquear el bot
+# 1. Inicia el servidor web en segundo plano
 mantener_vivo()
 
-# Inicia el bot de Discord con la variable de Render
+# 2. Inicia el bot de Discord
 bot.correr(os.environ.get("TOKEN"))
-    
