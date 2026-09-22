@@ -341,11 +341,6 @@ async def ayuda(ctx):
     embed.set_footer(text=f"Solicitado por {ctx.author.display_name}", icon_url=ctx.author.display_avatar.url)
     await ctx.send(embed=embed)
 
-# 3. ENCENDIDO
-keep_alive()
-
-# Coloca tu TOKEN aquí entre las comillas
-bot.run("")
   
 # 3. ENCENDIDO
 mantener_vivo()
