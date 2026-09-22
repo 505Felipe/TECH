@@ -347,3 +347,8 @@ keep_alive()
 # Coloca tu TOKEN aquí entre las comillas
 bot.run("")
   
+# 3. ENCENDIDO
+mantener_vivo()
+
+import os
+bot.correr(os.environ.get("TOKEN"))
